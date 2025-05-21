@@ -1,0 +1,15 @@
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  # These values are placeholders and should be set in the Netlify dashboard
+  VITE_SUPABASE_URL = "your-supabase-url"
+  VITE_SUPABASE_ANON_KEY = "your-supabase-anon-key"
+  VITE_STRIPE_PUBLIC_KEY = "your-stripe-public-key"
