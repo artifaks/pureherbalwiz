@@ -1,19 +1,19 @@
 
 // WordPress API Configuration
 export const WORDPRESS_ENDPOINTS = {
-  base: 'https://wellnessisgolden.com//wp-json/wp/v2',
-  posts: 'https://wellnessisgolden.com//wp-json/wp/v2/posts',
-  media: 'https://wellnessisgolden.com//wp-json/wp/v2/media',
-  pages: 'https://wellnessisgolden.com//wp-json/wp/v2/pages',
+  base: '/wp-json/wp/v2',
+  posts: '/wp-json/wp/v2/posts',
+  media: '/wp-json/wp/v2/media',
+  pages: '/wp-json/wp/v2/pages',
   custom: {
-    herbs: 'https://wellnessisgolden.com//wp-json/wp/v2/herbs',
-    ebooks: 'https://wellnessisgolden.com//wp-json/wp/v2/ebooks'
+    herbs: '/wp-json/wp/v2/herbs',
+    ebooks: '/wp-json/wp/v2/ebooks'
   }
 };
 
 // Authentication headers for WordPress API
 export function getAuthHeaders() {
-  const credentials = `info@plan2befit.com:Almalik@77`;
+  const credentials = `:`;
   // Use TextEncoder for encoding in ES modules
   const encoder = new TextEncoder();
   const data = encoder.encode(credentials);

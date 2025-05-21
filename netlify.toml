@@ -1,31 +1,14 @@
 
 [build]
   publish = "dist"
-  command = "npm run netlify:build"
+  command = "npm run build"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Proper MIME type configuration for JavaScript modules
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
-
-[[headers]]
-  for = "/*.mjs"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Content-Type = "text/css; charset=utf-8"
-
 [build.environment]
-  # These values are placeholders and should be set in the Netlify dashboard
-  VITE_SUPABASE_URL = "your-supabase-url"
-  VITE_SUPABASE_ANON_KEY = "your-supabase-anon-key"
-  VITE_STRIPE_PUBLIC_KEY = "your-stripe-public-key"
+  VITE_SUPABASE_URL = "q"
+  VITE_SUPABASE_ANON_KEY = ""
+  VITE_STRIPE_PUBLIC_KEY = ""
